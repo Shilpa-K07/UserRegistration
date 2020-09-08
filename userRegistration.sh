@@ -1,6 +1,6 @@
 echo welcome to user registration problem !
 
-read -p "Enter valid lirst name " lName
+read -p "Enter valid last name " lName
 
 pattern="^([A-Z])[A-Za-z]{2,}$"
 
