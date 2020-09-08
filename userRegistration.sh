@@ -1,23 +1,13 @@
 echo welcome to user registration problem !
 
-read -p "Enter valid first name " fName
+read -p "Enter valid email " email
 
-pattern="^([A-Z])[A-Za-z]{2,}$"
+pattern="^([0-9A-Za-z])+([.-+_][0-9A-Za-z]+)*@([0-9A-Za-z])+[.]([a-zA-Z])+([.][A-Za-z]+)*$"
 
-if [[ $fName =~ $pattern ]]
+if [[ $email =~ $pattern ]]
 then
         echo valid
 else
         echo not valid
 fi
 
-read -p "Enter valid last name " lName
-
-pattern="^([A-Z])[A-Za-z]{2,}$"
-
-if [[ $lName =~ $pattern ]]
-then
-	echo valid
-else
-	echo not valid
-fi
