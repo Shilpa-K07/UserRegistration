@@ -1,10 +1,10 @@
 echo welcome to user registration problem !
 
-read -p "Enter valid first name " fName
+read -p "Enter valid lirst name " lName
 
 pattern="^([A-Z])[A-Za-z]{2,}$"
 
-if [[ $fName =~ $pattern ]]
+if [[ $lName =~ $pattern ]]
 then
 	echo valid
 else
