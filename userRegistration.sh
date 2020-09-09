@@ -1,23 +1,14 @@
+#!/bin/bash -x
+
 echo welcome to user registration problem !
 
-read -p "Enter valid first name " fName
+read -p "Enter password " password
+passpat=$(($(tr -d '[[:alnum:]]' <<< $password | wc -m)-1))
 
-pattern="^([A-Z])[A-Za-z]{2,}$"
 
-if [[ $fName =~ $pattern ]]
+if [[ ${#password} -ge 8 && "$password" =~ [[:upper:]] && "$password" =~ [a-zA-Z] && "$password" =~ [0-9] && "$passpat" =~ 1 ]]
 then
-        echo valid
+        echo valid password
 else
-        echo not valid
-fi
-
-read -p "Enter valid last name " lName
-
-pattern="^([A-Z])[A-Za-z]{2,}$"
-
-if [[ $lName =~ $pattern ]]
-then
-	echo valid
-else
-	echo not valid
+        echo Invalid password
 fi
