@@ -1,8 +1,8 @@
 echo welcome to user registration problem !
 
-read -p "Enter valid last name " lName
+read -p "Enter last name " lName
 
-pattern="^([A-Z])[A-Za-z]{2,}$"
+pattern="^[[:upper:]][A-Za-z]{2,}$"
 
 if [[ $lName =~ $pattern ]]
 then
